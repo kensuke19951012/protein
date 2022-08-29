@@ -1,0 +1,16 @@
+<div class="container">
+  <h2>Admin/Posts#Index</h2>
+  <% @posts.each do |post| %>
+    <div class="row">
+      <div class="col-md-4">
+        <%= post.item_name %>
+      </div>
+      <div class="col-md-4">
+        <%= simple_format(post.introduction) %>
+      </div>
+      <div class="col-md-4">
+        <%= link_to 'Destroy', admin_post_path(post), method: :delete %>
+      </div>
+    </div>
+  <% end %>
+</div>

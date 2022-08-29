@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+admins = [
+    {email: 'admin1@example.com', password: 'passw@rd'},
+  ]
+
+admins.each do |admin|
+  admin_data = Admin.find_by(email: admin[:email])
+  if admin_data.nil?
+    Admin.create(
+        email: admin[:email],
+        password: admin[:password]
+      )
+  end
+end
