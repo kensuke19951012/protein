@@ -23,7 +23,7 @@
           </div>
           <%= f.text_field :price, class:"form-control", placeholder:"価格" %><br>
            <%= f.text_field :star, rows: '5',placeholder: "５段階評価"%><br>
-          <%= f.text_area :score %>
+          <%= f.text_area :introduction %>
           <% Genre.all.each do |genre| %>
             <%= f.radio_button :genre_id, genre.id %>
            <%= f.label :genre, genre.name%>
