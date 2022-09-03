@@ -1,5 +1,11 @@
 class Post < ApplicationRecord
-
+  validates :image, presence: true
+  validates :item_name, presence: true
+  validates :price, presence: true
+  validates :star, presence: true
+  validates :price, presence: true
+  validates :introduction, presence: true
+  validates :genre, presence: true
 
   has_one_attached :image
   belongs_to :member
