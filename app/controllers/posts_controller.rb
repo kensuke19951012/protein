@@ -50,9 +50,7 @@ class PostsController < ApplicationController
 
 
   def update
-    # respond_to do |format|
-
-    # end
+    
   end
 
 
